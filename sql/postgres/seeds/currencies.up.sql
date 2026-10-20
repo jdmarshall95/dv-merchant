@@ -49,6 +49,7 @@ values
     ('SAND.Ethereum', 'SAND', 'SAND', 18, false, 'ethereum', '0x3845badade8e6dff049820680d1f14bd3903a5d0', 0.000000000000000001, true, 'now()', 'now()', true, 18, 1, false, 'The Sandbox', 'ERC-20', false, false),
     ('SAND.Polygon', 'SAND', 'SAND', 18, false, 'polygon', '0xbbba073c31bf03b8acf7c28ef0738decf3695683', 0.000000000000000001, true, 'now()', 'now()', true, 18, 1, false, 'The Sandbox', 'ERC-20', false, false),
     ('SOL.Solana', 'SOL', 'SOL', 9, false, 'solana', 'sol', 0.000000001, true, 'now()', 'now()', true, 8, 1, false, 'Solana', null, true, true),
+    ('USDT.Solana', 'USDT', 'USDT', 6, false, 'solana', 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB', 0.000001, true, 'now()', 'now()', true, 1, 1, true, 'Tether', 'SPL', false, true),
     ('USDC.Solana', 'USDC', 'USDC', 6, false, 'solana', 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', 0.000001, true, 'now()', 'now()', true, 5, 1, true, 'Circle USD', 'SPL', false, true)
 ON CONFLICT (id) DO UPDATE SET
     currency_label = EXCLUDED.currency_label,

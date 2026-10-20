@@ -66,7 +66,7 @@ func (o Blockchain) Tokens() ([]string, error) {
 	case BlockchainPolygon:
 		return []string{"USDT.Polygon", "USDC.Polygon", "DAI.Polygon", "SAND.Polygon"}, nil
 	case BlockchainSolana:
-		return []string{"USDC.Solana"}, nil
+		return []string{"USDT.Solana", "USDC.Solana"}, nil
 	case BlockchainTron:
 		return []string{"USDT.Tron", "USDD.Tron", "USD1.Tron"}, nil
 
