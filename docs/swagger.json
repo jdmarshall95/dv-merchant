@@ -5443,6 +5443,7 @@
                             "ethereum",
                             "litecoin",
                             "polygon",
+                            "solana",
                             "tron"
                         ],
                         "type": "string",
@@ -5455,6 +5456,7 @@
                             "BlockchainEthereum",
                             "BlockchainLitecoin",
                             "BlockchainPolygon",
+                            "BlockchainSolana",
                             "BlockchainTron"
                         ],
                         "name": "blockchain",
@@ -5614,6 +5616,7 @@
                             "ethereum",
                             "litecoin",
                             "polygon",
+                            "solana",
                             "tron"
                         ],
                         "type": "string",
@@ -5626,6 +5629,7 @@
                             "BlockchainEthereum",
                             "BlockchainLitecoin",
                             "BlockchainPolygon",
+                            "BlockchainSolana",
                             "BlockchainTron"
                         ],
                         "name": "blockchain",
@@ -5779,6 +5783,7 @@
                             "ethereum",
                             "litecoin",
                             "polygon",
+                            "solana",
                             "tron"
                         ],
                         "type": "string",
@@ -5791,6 +5796,7 @@
                             "BlockchainEthereum",
                             "BlockchainLitecoin",
                             "BlockchainPolygon",
+                            "BlockchainSolana",
                             "BlockchainTron"
                         ],
                         "name": "blockchain",
@@ -9518,6 +9524,7 @@
                                 "ethereum",
                                 "litecoin",
                                 "polygon",
+                                "solana",
                                 "tron"
                             ],
                             "type": "string"
@@ -11346,6 +11353,7 @@
                 "ethereum",
                 "litecoin",
                 "polygon",
+                "solana",
                 "tron"
             ],
             "x-enum-varnames": [
@@ -11357,6 +11365,7 @@
                 "BlockchainEthereum",
                 "BlockchainLitecoin",
                 "BlockchainPolygon",
+                "BlockchainSolana",
                 "BlockchainTron"
             ]
         },

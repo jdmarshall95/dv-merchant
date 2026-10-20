@@ -47,7 +47,9 @@ values
     ('PYUSD.Arbitrum', 'PYUSD', 'PYUSD', 6, false, 'arbitrum', '0x46850ad61c2b7d64d08c9c754f45254596696984', 0.000001, true, 'now()', 'now()', true, 21, 1, true, 'PayPal USD', 'ERC-20', false, false),
     ('XAUT.Ethereum', 'XAUT', 'XAUT', 6, false, 'ethereum', '0x68749665ff8d2d112fa859aa293f07a622782f38', 0.000001, true, 'now()', 'now()', true, 20, 1, false, 'Tether Gold', 'ERC-20', false, false),
     ('SAND.Ethereum', 'SAND', 'SAND', 18, false, 'ethereum', '0x3845badade8e6dff049820680d1f14bd3903a5d0', 0.000000000000000001, true, 'now()', 'now()', true, 18, 1, false, 'The Sandbox', 'ERC-20', false, false),
-    ('SAND.Polygon', 'SAND', 'SAND', 18, false, 'polygon', '0xbbba073c31bf03b8acf7c28ef0738decf3695683', 0.000000000000000001, true, 'now()', 'now()', true, 18, 1, false, 'The Sandbox', 'ERC-20', false, false)
+    ('SAND.Polygon', 'SAND', 'SAND', 18, false, 'polygon', '0xbbba073c31bf03b8acf7c28ef0738decf3695683', 0.000000000000000001, true, 'now()', 'now()', true, 18, 1, false, 'The Sandbox', 'ERC-20', false, false),
+    ('SOL.Solana', 'SOL', 'SOL', 9, false, 'solana', 'sol', 0.000000001, true, 'now()', 'now()', true, 8, 1, false, 'Solana', null, true, true),
+    ('USDC.Solana', 'USDC', 'USDC', 6, false, 'solana', 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', 0.000001, true, 'now()', 'now()', true, 5, 1, true, 'Circle USD', 'SPL', false, true)
 ON CONFLICT (id) DO UPDATE SET
     currency_label = EXCLUDED.currency_label,
     token_label = EXCLUDED.token_label,

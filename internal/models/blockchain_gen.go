@@ -4,7 +4,7 @@ package models
 
 import "errors"
 
-type Blockchain string //	@name	Blockchain
+type Blockchain string // @name Blockchain
 
 const (
 	BlockchainArbitrum          Blockchain = "arbitrum"
@@ -15,6 +15,7 @@ const (
 	BlockchainEthereum          Blockchain = "ethereum"
 	BlockchainLitecoin          Blockchain = "litecoin"
 	BlockchainPolygon           Blockchain = "polygon"
+	BlockchainSolana            Blockchain = "solana"
 	BlockchainTron              Blockchain = "tron"
 )
 
@@ -37,6 +38,8 @@ func (o Blockchain) Valid() error {
 	case BlockchainLitecoin:
 		return nil
 	case BlockchainPolygon:
+		return nil
+	case BlockchainSolana:
 		return nil
 	case BlockchainTron:
 		return nil
@@ -62,6 +65,8 @@ func (o Blockchain) Tokens() ([]string, error) {
 		return []string{}, nil
 	case BlockchainPolygon:
 		return []string{"USDT.Polygon", "USDC.Polygon", "DAI.Polygon", "SAND.Polygon"}, nil
+	case BlockchainSolana:
+		return []string{"USDC.Solana"}, nil
 	case BlockchainTron:
 		return []string{"USDT.Tron", "USDD.Tron", "USD1.Tron"}, nil
 
@@ -87,6 +92,8 @@ func (o Blockchain) NativeCurrency() (string, error) {
 		return "LTC.Litecoin", nil
 	case BlockchainPolygon:
 		return "POL.Polygon", nil
+	case BlockchainSolana:
+		return "SOL.Solana", nil
 	case BlockchainTron:
 		return "TRX.Tron", nil
 
@@ -104,6 +111,7 @@ func AllBlockchain() []Blockchain {
 		BlockchainEthereum,
 		BlockchainLitecoin,
 		BlockchainPolygon,
+		BlockchainSolana,
 		BlockchainTron,
 	}
 }

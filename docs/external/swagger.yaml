@@ -44,6 +44,7 @@ definitions:
     - ethereum
     - litecoin
     - polygon
+    - solana
     - tron
     type: string
     x-enum-varnames:
@@ -55,6 +56,7 @@ definitions:
     - BlockchainEthereum
     - BlockchainLitecoin
     - BlockchainPolygon
+    - BlockchainSolana
     - BlockchainTron
   BlockchainAdditionalData:
     properties:
@@ -715,6 +717,7 @@ paths:
           - ethereum
           - litecoin
           - polygon
+          - solana
           - tron
           type: string
         name: blockchains

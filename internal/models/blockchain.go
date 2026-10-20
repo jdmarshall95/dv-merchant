@@ -17,6 +17,7 @@ var BlockchainSortOrder = map[Blockchain]int{
 	BlockchainBitcoinCash:       6,
 	BlockchainDogecoin:          7,
 	BlockchainArbitrum:          8,
+	BlockchainSolana:            9,
 }
 
 func (b Blockchain) ToPb() (commonv1.Blockchain, error) {
@@ -39,6 +40,8 @@ func (b Blockchain) ToPb() (commonv1.Blockchain, error) {
 		return commonv1.Blockchain_BLOCKCHAIN_DOGECOIN, nil
 	case BlockchainArbitrum:
 		return commonv1.Blockchain_BLOCKCHAIN_ARBITRUM, nil
+	case BlockchainSolana:
+		return commonv1.Blockchain_BLOCKCHAIN_SOLANA, nil
 	}
 	return commonv1.Blockchain_BLOCKCHAIN_UNSPECIFIED, fmt.Errorf("invalid blockchain: %s", b)
 }
@@ -63,6 +66,8 @@ func (b Blockchain) ToEPb() (commonv2.Blockchain, error) {
 		return commonv2.Blockchain_BLOCKCHAIN_DOGECOIN, nil
 	case BlockchainArbitrum:
 		return commonv2.Blockchain_BLOCKCHAIN_ARBITRUM, nil
+	case BlockchainSolana:
+		return commonv2.Blockchain_BLOCKCHAIN_SOLANA, nil
 	default:
 		return commonv2.Blockchain_BLOCKCHAIN_UNSPECIFIED, fmt.Errorf("invalid blockchain: %s", b)
 	}
@@ -88,13 +93,15 @@ func ConvertToModel(blockchain commonv1.Blockchain) Blockchain {
 		return BlockchainDogecoin
 	case commonv1.Blockchain_BLOCKCHAIN_ARBITRUM:
 		return BlockchainArbitrum
+	case commonv1.Blockchain_BLOCKCHAIN_SOLANA:
+		return BlockchainSolana
 	}
 	return ""
 }
 
 func (b Blockchain) RecalculateNativeBalance() bool {
 	switch b {
-	case BlockchainTron, BlockchainEthereum, BlockchainBinanceSmartChain, BlockchainPolygon, BlockchainArbitrum:
+	case BlockchainTron, BlockchainEthereum, BlockchainBinanceSmartChain, BlockchainPolygon, BlockchainArbitrum, BlockchainSolana:
 		return true
 	default:
 		return false
@@ -150,6 +157,8 @@ func (b Blockchain) ConfirmationBlockCount() uint64 {
 		return 6
 	case BlockchainPolygon:
 		return 300
+	case BlockchainSolana:
+		return 1
 	default:
 		return 0
 	}

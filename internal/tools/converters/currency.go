@@ -20,6 +20,7 @@ var blockchainExplorerDomainMap = map[models.Blockchain]string{
 	models.BlockchainPolygon:           "https://polygonscan.com/tx/{tx_hash}",
 	models.BlockchainDogecoin:          "https://blockchair.com/dogecoin/transaction/{tx_hash}",
 	models.BlockchainArbitrum:          "https://blockchair.com/arbitrum-one/transaction/{tx_hash}",
+	models.BlockchainSolana:            "https://solscan.io/tx/{tx_hash}",
 }
 
 func FromCurrencyModelToResponse(model *models.Currency) *currency_response.GetCurrencyResponse {

@@ -5450,6 +5450,7 @@ const docTemplate = `{
                             "ethereum",
                             "litecoin",
                             "polygon",
+                            "solana",
                             "tron"
                         ],
                         "type": "string",
@@ -5462,6 +5463,7 @@ const docTemplate = `{
                             "BlockchainEthereum",
                             "BlockchainLitecoin",
                             "BlockchainPolygon",
+                            "BlockchainSolana",
                             "BlockchainTron"
                         ],
                         "name": "blockchain",
@@ -5621,6 +5623,7 @@ const docTemplate = `{
                             "ethereum",
                             "litecoin",
                             "polygon",
+                            "solana",
                             "tron"
                         ],
                         "type": "string",
@@ -5633,6 +5636,7 @@ const docTemplate = `{
                             "BlockchainEthereum",
                             "BlockchainLitecoin",
                             "BlockchainPolygon",
+                            "BlockchainSolana",
                             "BlockchainTron"
                         ],
                         "name": "blockchain",
@@ -5786,6 +5790,7 @@ const docTemplate = `{
                             "ethereum",
                             "litecoin",
                             "polygon",
+                            "solana",
                             "tron"
                         ],
                         "type": "string",
@@ -5798,6 +5803,7 @@ const docTemplate = `{
                             "BlockchainEthereum",
                             "BlockchainLitecoin",
                             "BlockchainPolygon",
+                            "BlockchainSolana",
                             "BlockchainTron"
                         ],
                         "name": "blockchain",
@@ -9525,6 +9531,7 @@ const docTemplate = `{
                                 "ethereum",
                                 "litecoin",
                                 "polygon",
+                                "solana",
                                 "tron"
                             ],
                             "type": "string"
@@ -11353,6 +11360,7 @@ const docTemplate = `{
                 "ethereum",
                 "litecoin",
                 "polygon",
+                "solana",
                 "tron"
             ],
             "x-enum-varnames": [
@@ -11364,6 +11372,7 @@ const docTemplate = `{
                 "BlockchainEthereum",
                 "BlockchainLitecoin",
                 "BlockchainPolygon",
+                "BlockchainSolana",
                 "BlockchainTron"
             ]
         },
